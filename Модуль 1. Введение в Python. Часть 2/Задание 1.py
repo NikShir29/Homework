@@ -3,4 +3,7 @@ number2 = int(input())
 number3 = int(input())
 
 sum = number1 + number2 + number3
+mult = number1 * number2 * number3
+
 print(sum)
+print(mult)

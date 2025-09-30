@@ -49,7 +49,7 @@ if manager1_salary > manager2_salary and manager1_salary > manager3_salary:
     manager1_salary += 200
     best_worker = 1
 elif manager2_salary > manager1_salary and manager2_salary > manager3_salary:    #Определение лучшего работника по объему зарплаты.
-    manager2_salary += 200                                                       #Начисление лучшему работнику премию в 200 долларов.
+    manager2_salary += 200                                                       #Начисление лучшему работнику премии в 200 долларов.
     best_worker = 2
 elif manager3_salary > manager1_salary and manager3_salary > manager2_salary:
     manager3_salary += 200
@@ -69,4 +69,5 @@ elif best_worker == 2:
 elif best_worker == 3:
     print("Лучший работник месяца: Анна. Ей начислена премия в 200 долларов.")
 else:
+
     print("Лучшего работника в этом месяце нет.")            #Если высшая з/п одинаковая как минимум у двух людей, лучшего работника нет.

@@ -15,5 +15,4 @@ for number in range(number1, number2 + 1):
 for number in range(number1, number2 + 1):
     if number % 5 == 0:
         numbers_5 += 1
-
 print(f"Количество чисел, кратных 5: {numbers_5}")

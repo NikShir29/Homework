@@ -31,12 +31,14 @@ def start():
             for product in products:
                 if product[0] == "Хлеб" and product[2] > 0:
                     shopping_cart.append("Хлеб (бесплатно)")
-                    bonus_text += "Вы получили хлеб бесплатно. \n"
+                    bonus_text += "Вы получили хлеб бесплатно."
         print(f"Товары в корзине: {shopping_cart}, Цена товаров в корзине: {price_all}")
     if price_all > 20:
         discount = price_all * 0.1
         price_all -= discount
-        bonus_text += "Применена скидка 10%."
-    print(f"{bonus_text} Чек: {price_all}$")
+        bonus_text += "\nПрименена скидка 10%."
+    if bonus_text:
+        print(bonus_text)
+    print(f"К оплате: {price_all}$")
 
 start()

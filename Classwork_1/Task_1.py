@@ -11,12 +11,9 @@ player_choice = int(input("""\nВведите 1 для изучения ново
 
 if player_choice == 1:
     while True:
+        print("Доступные заклинания: ", new_spells)
         spell_choice = (input("""\nВыберите, какое заклинание изучить.
-Введите 8 для выхода.
-Доступные заклинания:
-"Снежная буря"
-"Огненный шар"
-"Превращение": """))
+Введите 8 для выхода: """))
         if spell_choice in new_spells and spell_choice in player_spells:
             print("Такое заклинание уже есть в книге!")
             print("Ваши заклинания: ", player_spells)

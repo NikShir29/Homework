@@ -31,3 +31,20 @@ while True:
                 print("Ваши заклинания: ", player_spells)
     elif choice == 2:
         print("Ваши заклинания: ", player_spells)
+    elif choice == 3:
+        print("Ваши заклинания: ", player_spells)
+        spell_training = input("Выберите, какое заклинание тренировать: ")
+        if spell_training not in player_spells:
+            print("Вы не знаете такого заклинания!")
+        else:
+            print("Вы тренируете:", spell_training)
+            print(spell_training, spell_training, spell_training)
+    elif choice == 4:
+        print("Ваши заклинания: ", player_spells)
+        spell_cast = input("Выберите, какое заклинание произнести: ")
+        if spell_cast not in player_spells:
+            print("У вас нет такого заклинания!")
+        else:
+            print("Вы применили заклинание:", spell_cast)
+    elif choice == 5:
+        break

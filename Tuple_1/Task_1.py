@@ -6,4 +6,15 @@ products = {
     "Сладости": [("Конфеты", 60, 100), ("Зефир", 40, 60), ("Шоколад", 30, 140)]
 }
 
-print(products)
+most_expensive_item = None
+most_expensive_item_price = 0
+
+for product in products:
+    print(f"\n{product}:")
+    for item in products[product]:
+        print(f"{item[0]} — {item[1]}шт., по {item[2]} руб.")
+        if item[2] > most_expensive_item_price:
+            most_expensive_item = item[0]
+            most_expensive_item_price = item[2]
+
+print(f"\nСамый дорогой продукт: {most_expensive_item} ({most_expensive_item_price} руб.)")

@@ -12,8 +12,16 @@ store_items = {
     "Механический паук": frozenset({"техника", "редкое", "инновации", "игрушка"}),
 }
 
-for item in store_items:
-    print(item)
+def list_items():
+    print("Список товаров:\n")
+    for item in store_items:
+        print(item)
+
+def find_by_category(category):
+    print("\nСписок товаров по данной категории: ")
+    for key, value in store_items.items():
+        if category.lower() in value:
+            print(key)
 
 def menu():
     while True:
@@ -21,16 +29,23 @@ def menu():
 Введите 1 для добавления товара
 2 для вывода всех товаров
 3 для поиска товаров по категории
-4 для выхода: """))
+4 для выхода: 
+"""))
         if choice == 1:
-            new_item = input("Введите название товара: ")
+            new_item = input("\nВведите название товара: ")
             new_item_category_list = input("Введите категории товара через запятую: ")
             new_item_category_list = new_item_category_list.split(",")
-            new_item_category_list = [s.strip() for s in new_item_category_list]
-            new_item_category_list = [h.lower() for h in new_item_category_list]
+            new_item_category_list = ([s.strip() for s in new_item_category_list])
+            new_item_category_list = ([h.lower() for h in new_item_category_list])
             store_items[new_item] = frozenset(new_item_category_list)
-            print(new_item)
-            print(new_item_category_list)
-            print(store_items)
+            print("\nТовар добавлен.")
+        elif choice == 2:
+            list_items()
+        elif choice == 3:
+            find_by_category(input("\nВведите категорию по которой вывести подходящие товары: "))
 
 menu()
+
+def find_by_category(category):
+    if category.lower() in store_items.values():
+        print(key)

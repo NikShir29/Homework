@@ -18,10 +18,14 @@ def list_items():
         print(item)
 
 def find_by_category(category):
-    print("\nСписок товаров по данной категории: ")
-    for key, value in store_items.items():
-        if category.lower() in value:
-            print(key)
+    found_items = [key for key, value in store_items.items()
+                    if category.lower() in value]
+    if found_items:
+        print("Список товаров с данной категорией: ")
+        for item in found_items:
+            print(item)
+    else:
+        print("Такой категории нет.")
 
 def menu():
     while True:
@@ -43,9 +47,7 @@ def menu():
             list_items()
         elif choice == 3:
             find_by_category(input("\nВведите категорию по которой вывести подходящие товары: "))
+        elif choice == 4:
+            break
 
 menu()
-
-def find_by_category(category):
-    if category.lower() in store_items.values():
-        print(key)
